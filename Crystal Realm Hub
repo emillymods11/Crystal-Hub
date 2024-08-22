@@ -33,6 +33,9 @@ end)
 tab.newButton("Redz Hub", "Menú | Hub", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
 
+tab.newButton("BlackTrap Hub", "Menú | Hub", function()  loadstring(game:HttpGetAsync("https://lua-library.btteam.net/script-auth.txt"))()
+end)
+
 local tab = DrRayLibrary.newTab("Meme Sea", "ImageIdHere")
 
 tab.newButton("Redz Hub", "Menú | Hub", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/MemeSea/main/Source.lua"))()
