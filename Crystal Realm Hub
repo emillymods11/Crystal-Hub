@@ -71,6 +71,26 @@ end)
 tab.newButton("Auto Win v2", "Menú | Hub", function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/autowin.lua')))()
 end)
 
+local tab = DrRayLibrary.newTab("KingLeg", "ImageIdHere")
+
+tab.newButton("Arc Hub", "Menú | Hub", function()  
+getgenv().RaidUI = false -- For Hidden Raid Mode true = show and false = hidden
+getgenv().CustomDistance = 10 -- For Bug Can't Swipe Distance
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChopLoris/ArcHub/main/main.lua"))()
+end)
+
+tab.newButton("Demonic Hub", "Menú | Hub", function()  
+getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
+end)
+
+tab.newButton("Zen Hub", "Menú | Hub", function()  local __function = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua", true))()
+end)
+
+tab.newButton("Zee Hub", "Menú | Hub", function()  local __function = loadstring(game:HttpGet('https://zuwz.me/Ls-Zee-Hub-KL'))()
+end)
+
 local tab = DrRayLibrary.newTab("Universal", "ImageIdHere")
 
 tab.newButton("Infinite Yiel", "Floating | Menú", function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
