@@ -17,7 +17,7 @@ end)
 tab.newButton("Xero Hub", "Menú | Hub", function()  loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XeroHub-15621"))()
 end)
 
-tab.newButton("Domadic Hub", "Menú| Hub", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()
+tab.newButton("Ninja Hub", "Menú| Hub", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/NinjaHub/main/LoaderBloxFruit.lua"))()
 end)
 
 tab.newButton("Azure Hub", "Menú | Hub", function()
