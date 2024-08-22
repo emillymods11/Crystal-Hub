@@ -52,6 +52,26 @@ repeat wait() until game:IsLoaded()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Binintrozza/yutv2e/main/Yutohub')))()
 end)
 
+local tab = DrRayLibrary.newTab("Rivals", "ImageIdHere")
+
+tab.newButton("Venox v2", "Menú | Hub", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/venoxrivalsv2'))()
+end)
+
+tab.newButton("Tbao Hub", "Menú | Hub", function()  
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubRivals"))()
+end)
+
+tab.newButton("InfiniX Hub", "Menú | Hub", function()  local __function = loadstring(game:HttpGet("https://github.com/Hosvile/InfiniX/releases/latest/download/main.lua", true))
+
+__function(__function)
+end)
+
+tab.newButton("Auto Win v1", "Menú | Hub", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/RivalsAutoFarmNice/main/Code"))()
+end)
+
+tab.newButton("Auto Win v2", "Menú | Hub", function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/autowin.lua')))()
+end)
+
 local tab = DrRayLibrary.newTab("Universal", "ImageIdHere")
 
 tab.newButton("Infinite Yiel", "Floating | Menú", function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
