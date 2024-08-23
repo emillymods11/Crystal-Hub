@@ -468,3 +468,24 @@ AddButton(Main, {
 
   end
 })
+
+local section = AddSection(Main, {"by: @emilly_.01.v"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
+
+AddButton(Main, {
+  Name = "Link Discord",
+  Callback = function() setclipboard("https://discord.com/invite/crystalrealmhub")
+    UILib:Notification("Notification", "Copied!", "Okay")
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Link TikTok",
+  Callback = function() setclipboard("https://www.tiktok.com/@emilly_.01.v?_t=8p6vgCFgMEs&_r=1")
+    UILib:Notification("Notification", "Copied!", "Okay")
+
+  end
+})
