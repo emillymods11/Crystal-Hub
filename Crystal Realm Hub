@@ -1,104 +1,338 @@
-local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
 
-local window = DrRayLibrary:Load("Crystal Realm", "Owner: Emilly")
+MakeWindow({
+  Hub = {
+    Title = "Crystal Realm |",
+    Animation = "UNIVERSAL HUB"
+  },
+  Key = {
+    KeySystem = true,
+    Title = "Crystal Realm",
+    Description = "BY: emilly_.11",
+    KeyLink = "CrystalMods",
+    Keys = {"CrystalMods"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Menu",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+})
 
-local tab = DrRayLibrary.newTab("Blox Fruit", "ImageIdHere")
+--[[
+  Hub = {
+    Title = "Crystal Realm" -- <string> Titulo do seu script
+    Animation = "by : emilly" -- <string> Adiciona um texto na animacão do seu HUB
+  },
+  Key = {
+    KeySystem = <bollean> Adiciona um sistema de chaves
+    Title = "Key System" <string> Adiciona um titulo ao seu sistema de chaves
+    Description = "" <string> Adiciona uma descrição ao seu sistema de chaves
+    KeyLink = "" <string> Adicina o Link onde pega a chave do HUB
+    Keys = {"1234"} <table> Adiciona as Chaves
+    Notifi = {
+      Notifications = true <boolean> Adicina notificações ao sistema de chaves
+      CorrectKey = "Running the Script..." <string> notificação quando a chave estiver correta
+      Incorrectkey = "The key is incorrect" <string> notificação quando a chave estiver incorreta
+      CopyKeyLink = "Copied to Clipboard" <string> notificação quando o link da chave fir copiado
+    }
+  }
+]]
 
-tab.newButton("Speed Hub","Menú | Hub", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()  
-end)
+MinimizeButton({
+  Image = "rbxassetid://125546703749663",
+  Size = {40, 40},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(255, 0, 0)
+})
 
-tab.newButton("Cokka Hub", "Menú | Hub", function()  loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
-end)
+--[[
+  Image = "" <string> imagem do botão
+  Size = {40, 40} <table> tamanho do botão
+  Color = Color3.fromRGB(10, 10, 10) <Color3>  Cor do fundo do botäo
+  Corner = true -- <boolean> Adicina um UICorner
+  Stroke = false <boolean> Adiciona um UIStroke
+  StrokeColor = Color3.fromRGB(255, 0, 0) <Color3> Cor do UIStroke
+]]
 
-tab.newButton("FaiFao Hub", "Menú | Hub", function()  loadstring(game:HttpGet"https://raw.githubusercontent.com/PNguyen0199/Script/main/Fai-Fao-Ver2.lua")()
-end)
+local Main = MakeTab({Name = "Blox Fruit"})
 
-tab.newButton("Xero Hub", "Menú | Hub", function()  loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XeroHub-15621"))()
-end)
+local section = AddSection(Main, {"Blox Fruit Scripts Hub"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
 
-tab.newButton("Ninja Hub", "Menú| Hub", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/NinjaHub/main/LoaderBloxFruit.lua"))()
-end)
+--[[
+  Name = "Main" <string> Nome da guia
+]]
 
-tab.newButton("Azure Hub", "Menú | Hub", function()
+AddButton(Main, {
+  Name = "Azure Hub",
+  Callback = function()
 getgenv().Team = "Pirates"
 getgenv().AutoLoad = false --Will Load Script On Server Hop
 getgenv().SlowLoadUi  = false
 getgenv().ForceUseSilentAimDashModifier = false --Force turn on silent aim , if error then executor problem
 getgenv().ForceUseWalkSpeedModifier = false --Force turn on Walk Speed Modifier , if error then executor problem
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-end)
 
-tab.newButton("Redz Hub", "Menú | Hub", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-end)
+  end
+})
 
-tab.newButton("BlackTrap Hub", "Menú | Hub", function()  loadstring(game:HttpGetAsync("https://lua-library.btteam.net/script-auth.txt"))()
-end)
+AddButton(Main, {
+  Name = "FaiFao Hub",
+  Callback = function() loadstring(game:HttpGet"https://raw.githubusercontent.com/PNguyen0199/Script/main/Fai-Fao-Ver2.lua")()
 
-local tab = DrRayLibrary.newTab("Meme Sea", "ImageIdHere")
+  end
+})
 
-tab.newButton("Redz Hub", "Menú | Hub", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/MemeSea/main/Source.lua"))()
-end)
+AddButton(Main, {
+  Name = "HoHo Hub",
+  Callback = function()
+_G.HohoVersion = "v4"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
 
-tab.newButton("ElGato Hub", "Menú | Hub", function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/FrostLua/Krakles/main/ElgatoHub/Loader.lua'),true))()
-end)
+  end
+})
 
-tab.newButton("Shiny Hub", "Menú | Hub", function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ZaqueHub/ShinyHub-MMSea/main/MEME%20SEA%20PROTECT.txt'))()
-end)
+AddButton(Main, {
+  Name = "Xero Hub",
+  Callback = function()  loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XeroHub-15621"))()
 
-tab.newButton("Bini Hub", "Menú | Hub", function()
-repeat wait() until game:IsLoaded()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Binintrozza/yutv2e/main/Yutohub')))()
-end)
+  end
+})
 
-local tab = DrRayLibrary.newTab("Rivals", "ImageIdHere")
+AddButton(Main, {
+  Name = "Speed Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
 
-tab.newButton("Venox v2", "Menú | Hub", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/venoxrivalsv2'))()
-end)
+  end
+})
 
-tab.newButton("Tbao Hub", "Menú | Hub", function()  
-loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubRivals"))()
-end)
+AddButton(Main, {
+  Name = "Windy Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ItzWindy01/WindyXBypass/main/Rewrite.lua"))()
 
-tab.newButton("InfiniX Hub", "Menú | Hub", function()  local __function = loadstring(game:HttpGet("https://github.com/Hosvile/InfiniX/releases/latest/download/main.lua", true))
+  end
+})
 
-__function(__function)
-end)
+AddButton(Main, {
+  Name = "Infinite Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/mkhoidzvl13/Infinite-Hub/main/Infinite.txt"))()
 
-tab.newButton("Auto Win v1", "Menú | Hub", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/RivalsAutoFarmNice/main/Code"))()
-end)
+  end
+})
 
-tab.newButton("Auto Win v2", "Menú | Hub", function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/autowin.lua')))()
-end)
+AddButton(Main, {
+  Name = "MinGaming Hub",
+  Callback = function() loadstring(game:HttpGet"https://raw.githubusercontent.comBasicallyyBasicallyy/main/MinGamingV4.lua")()
 
-local tab = DrRayLibrary.newTab("KingLeg", "ImageIdHere")
+  end
+})
 
-tab.newButton("Arc Hub", "Menú | Hub", function()  
+AddButton(Main, {
+  Name = "Cokka Hub",
+  Callback = function() loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Ninja Hub",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/NinjaHub/main/LoaderBloxFruit.lua"))()
+    
+  end
+})
+
+AddButton(Main, {
+  Name = "ZaiH Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiHubBeta/main/AnDepZaiHubBeta.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "RedZ Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "BlackTrap Hub",
+  Callback = function()  loadstring(game:HttpGetAsync("https://lua-library.btteam.net/script-auth.txt"))()
+
+  end
+})
+
+--[[
+  Name = "test" <string> nome do seu botão
+  Callback = function()
+    -- funcão do seu botão
+  end
+]]
+
+local Main = MakeTab({Name = "Meme Sea"})
+
+local section = AddSection(Main, {"Meme Sea Scripts Hub"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
+
+AddButton(Main, {
+  Name = "Domadic Hub",
+  Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Xzibits/Meme%20Sea%20Script'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "RedZ Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/MemeSea/main/Source.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "ElGato Hub",
+  Callback = function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/FrostLua/Krakles/main/ElgatoHub/Loader.lua'),true))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Shiny Hub",
+  Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ZaqueHub/ShinyHub-MMSea/main/MEME%20SEA%20PROTECT.txt'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Yotu Hub",
+  Callback = function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/Binintrozza/yutv2e/main/Yutohub')))()
+
+  end
+})
+
+local Main = MakeTab({Name = "King Legacy"})
+
+local section = AddSection(Main, {"King Legacy Scripts Hub"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
+
+AddButton(Main, {
+  Name = "Arc Hub",
+  Callback = function()
 getgenv().RaidUI = false -- For Hidden Raid Mode true = show and false = hidden
 getgenv().CustomDistance = 10 -- For Bug Can't Swipe Distance
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ChopLoris/ArcHub/main/main.lua"))()
-end)
 
-tab.newButton("Demonic Hub", "Menú | Hub", function()  
-getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
+  end
+})
+
+AddButton(Main, {
+  Name = "Zen Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua", true))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Zee Hub",
+  Callback = function() loadstring(game:HttpGet('https://zuwz.me/Ls-Zee-Hub-KL'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Demonic Hub",
+Callback = function() getgenv().ValidateType = "Key" -- You can use "Whitelist" too! + pls don't remove nothing from this script or it can have errors.
  
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Prosexy/Demonic-HUB-V2/main/DemonicHub_V2.lua", true))()
-end)
 
-tab.newButton("Zen Hub", "Menú | Hub", function()  local __function = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua", true))()
-end)
+  end
+})
 
-tab.newButton("Zee Hub", "Menú | Hub", function()  local __function = loadstring(game:HttpGet('https://zuwz.me/Ls-Zee-Hub-KL'))()
-end)
+local Main = MakeTab({Name = "Rivals Game"})
 
-local tab = DrRayLibrary.newTab("Universal", "ImageIdHere")
+local section = AddSection(Main, {"Rivals Scripts Hub"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
 
-tab.newButton("Infinite Yiel", "Floating | Menú", function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-end)
+AddButton(Main, {
+  Name = "Thaibao Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubRivals"))()
 
-tab.newButton("Fly Main", "Floating | Menú", function()
-loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
-end)
+  end
+})
 
-tab.newButton("Keyboard", "Floating | Menú", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
-end)
+AddButton(Main, {
+  Name = "Inifinix Hub",
+  Callback = function() local __function = loadstring(game:HttpGet("https://github.com/Hosvile/InfiniX/releases/latest/download/main.lua", true))
+
+__function(__function)
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Venox Hub",
+  Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/venoxrivalsv2'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Auto Win 1 Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/RivalsAutoFarmNice/main/Code"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Auto Win 2 Hub",
+  Callback = function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/autowin.lua')))()
+
+  end
+})
+
+local Main = MakeTab({Name = "Other Options"})
+
+local section = AddSection(Main, {"Basic scripts"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
+
+AddButton(Main, {
+  Name = "Fly V3 Gui",
+  Callback = function() loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Keyboard Gui",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Infinite Yiel",
+  Callback = function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Fe Emote Gui",
+  Callback = function() loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/RedZenXYZ/3da6af1961efa275de6c3c2a6dbace03/raw/bb027f99cec0ea48ef9c5eabfb9116ddff20633d/FE%2520Emotes%2520Gui"))()
+
+  end
+})
