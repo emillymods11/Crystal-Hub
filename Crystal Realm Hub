@@ -6,7 +6,7 @@ MakeWindow({
     Animation = "UNIVERSAL HUB"
   },
   Key = {
-    KeySystem = true,
+    KeySystem = false,
     Title = "Crystal Realm",
     Description = "BY: emilly_.11",
     KeyLink = "CrystalMods",
