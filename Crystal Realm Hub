@@ -318,7 +318,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Roman34296589/SnapSan
 })
 
 AddButton(Main, {
-  Name = "Highlight Hub | key : hlvipcomingsoon",
+  Name = "Highlight Hub | key: hlvipcomingsoon",
   Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/Main"))()
 
   end
