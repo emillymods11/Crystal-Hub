@@ -2,7 +2,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/ma
 
 MakeWindow({
   Hub = {
-    Title = "Crystal Realm |",
+    Title = "Crystal Realm | Universal Hub",
     Animation = "UNIVERSAL HUB"
   },
   Key = {
@@ -134,7 +134,7 @@ AddButton(Main, {
 })
 
 AddButton(Main, {
-  Name = "Cokka Hub",
+  Name = "Cokka Hub | Key: ow7hVvz8V5",
   Callback = function() loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
 
   end
@@ -298,6 +298,138 @@ AddButton(Main, {
 AddButton(Main, {
   Name = "Auto Win 2 Hub",
   Callback = function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/venoxhh/universalscripts/main/rivals/autowin.lua')))()
+
+  end
+})
+
+local Main = MakeTab({Name = "Murder Mystery"})
+
+local section = AddSection(Main, {"MM2 Scripts Hub"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
+
+AddButton(Main, {
+  Name = "SnapSanix Hub",
+  Callback = function() 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Roman34296589/SnapSanix-GUI-MM2/main/SnapSanix%20GUI%20mm2.lua'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Highlight Hub",
+  Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSick/HighlightMM2/main/Main"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Symphony Hub",
+  Callback = function() 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ThatSick/ArrayField/main/SymphonyHub.lua'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Xhub",
+  Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
+
+  end
+})
+
+local Main = MakeTab({Name = "Blade ball"})
+
+local section = AddSection(Main, {"Blade ball Scripts Hub"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
+
+AddButton(Main, {
+  Name = "Visual Hub",
+  Callback = function() 
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a5945467f3b9388503ca653c0ea49cba.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Ether Hub",
+  Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/6w0s/_6w0s/main/Loader.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Chaotic Hub",
+  Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mc4121ban/trashscript/main/chaotic.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Nizus Hub",
+  Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/uwumani/Nizus/main/Nizus.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Nexam Hub",
+  Callback = function() 
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6af56c1753ac6679dee3acbd1fd952e5.lua"))()
+
+  end
+})
+
+local Main = MakeTab({Name = "JailBreak"})
+
+local section = AddSection(Main, {"JailBreak Scripts Hub"})
+--[[
+  {"Teste"} <table> nome da janela
+]]
+
+AddButton(Main, {
+  Name = "Projec Hub",
+  Callback = function() 
+loadstring(game:HttpGet('http://scripts.projectauto.xyz/AutoRobV4'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Snipehype Hub",
+  Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SnipeHype200/i-music/main/beta.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Sensation Hub | Key: 78b23rjLS ",
+  Callback = function() 
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/730854e5b6499ee91deb1080e8e12ae3.lua"))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Universal Farm",
+  Callback = function() 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/BlitzIsKing/UniversalFarm/main/Loader/Regular'))()
+
+  end
+})
+
+AddButton(Main, {
+  Name = "Templs Hub",
+  Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TempIsGay/Cashfarm/main/AutoCrateFree.lua"))()
 
   end
 })
