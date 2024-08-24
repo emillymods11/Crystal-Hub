@@ -374,7 +374,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Mc4121ban/trashscript
 AddButton(Main, {
   Name = "Nizus Hub",
   Callback = function() 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/uwumani/Nizus/main/Nizus.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hypurzium/BladeBall/main/NizusLoader.lua"))()
 
   end
 })
@@ -382,7 +382,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/uwumani/Nizus/main/Ni
 AddButton(Main, {
   Name = "Nexam Hub",
   Callback = function() 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6af56c1753ac6679dee3acbd1fd952e5.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ea80f1b008dbe2b77b7ac8b3a525a180.lua"))()
 
   end
 })
@@ -468,6 +468,107 @@ AddButton(Main, {
 
   end
 })
+
+AddButton(Main, {
+  Name = "Esp Name",
+  Callback = function() -- Servicios
+local Players = game:GetService("Players")
+
+-- Función para crear el ESP
+local function createESP(player)
+    if player.Character and player.Character:FindFirstChild("Head") then
+        -- Crear un BillboardGui
+        local billboardGui = Instance.new("BillboardGui")
+        billboardGui.Size = UDim2.new(0, 200, 0, 50)
+        billboardGui.Adornee = player.Character.Head
+        billboardGui.AlwaysOnTop = true
+        billboardGui.Parent = player.Character.Head
+        
+        -- Crear un TextLabel para el nombre
+        local textLabel = Instance.new("TextLabel")
+        textLabel.Size = UDim2.new(1, 0, 1, 0)
+        textLabel.BackgroundTransparency = 1
+        textLabel.TextColor3 = Color3.new(1, 1, 1)
+        textLabel.TextStrokeTransparency = 0
+        textLabel.Text = player.Name
+        textLabel.Parent = billboardGui
+    end
+end
+
+-- Crear ESP para los jugadores existentes
+for _, player in ipairs(Players:GetPlayers()) do
+    createESP(player)
+end
+
+-- Conectar la creación de ESP a nuevos jugadores
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function()
+        createESP(player)
+    end)
+end)
+
+-- Eliminar ESP cuando el jugador se va
+Players.PlayerRemoving:Connect(function(player)
+    if player.Character and player.Character:FindFirstChild("Head") then
+        local billboardGui = player.Character.Head:FindFirstChildOfClass("BillboardGui")
+        if billboardGui then
+            billboardGui:Destroy()
+        end
+    end
+end)
+
+  end
+})
+
+local Slider = AddSlider(Main, {
+  Name = "Speed Slider",
+  MinValue = 16,
+  MaxValue = 500,
+  Default = 50,  -- You can set this to a default value you prefer within the range
+  Increase = 1,
+  Callback = function(Value)
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+      player.Character.Humanoid.WalkSpeed = Value
+    end
+  end
+})
+
+--[[
+  Name = "Speed Slider" <string> name of the slider control
+  MinValue = 16 <number> minimum speed value
+  MaxValue = 500 <number> maximum speed value
+  Default = 50 <number> default speed value (can be adjusted)
+  Increase = 1 <number> step value for the slider
+  Callback = function(Value)
+    function to set the player's speed
+  end
+]]
+
+local Slider = AddSlider(Main, {
+  Name = "Jump Power Slider",
+  MinValue = 50,
+  MaxValue = 300,
+  Default = 100,  -- Puedes ajustar este valor predeterminado según tus preferencias
+  Increase = 1,
+  Callback = function(Value)
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+      player.Character.Humanoid.JumpPower = Value
+    end
+  end
+})
+
+--[[
+  Name = "Jump Power Slider" <string> nombre del control deslizante
+  MinValue = 50 <number> valor mínimo del salto
+  MaxValue = 300 <number> valor máximo del salto
+  Default = 100 <number> valor predeterminado del salto (puede ajustarse)
+  Increase = 1 <number> incremento del deslizador
+  Callback = function(Value)
+    función para ajustar el poder de salto del jugador
+  end
+]]
 
 local section = AddSection(Main, {"by: @emilly_.01.v"})
 --[[
